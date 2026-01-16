@@ -77,7 +77,6 @@ public class BeerService {
         beerRepository.delete(beer);
     }
 
-    @Transactional
     public BeerDto getBeer(Long id) {
         Beer beer = beerRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Beer not found with id: " + id));

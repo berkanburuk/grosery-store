@@ -1,4 +1,4 @@
-package com.grocerystore.service.discount;
+package com.grocerystore.util;
 
 
 import com.grocerystore.dto.OrderItemDto;
@@ -6,12 +6,14 @@ import com.grocerystore.model.Beer;
 import com.grocerystore.model.Bread;
 import com.grocerystore.model.Item;
 import com.grocerystore.model.Vegetable;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class PriceCalculator {
+public final class PriceCalculator {
+
+    private PriceCalculator() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
 
     public static double calculateGrossTotal(List<OrderItemDto> items) {
         return items.stream()

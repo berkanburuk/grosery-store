@@ -5,7 +5,7 @@ import com.grocerystore.model.Bread;
 import com.grocerystore.model.Item;
 import com.grocerystore.model.Vegetable;
 import com.grocerystore.service.discount.DiscountStrategy;
-import com.grocerystore.service.discount.PriceCalculator;
+import com.grocerystore.util.PriceCalculator;
 import com.grocerystore.service.discount.VegetableDiscount;
 
 import java.util.List;
